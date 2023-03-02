@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ratos</title>
+    <style>
+        @font-face {
+            font-family: titulos;
+            src: url(font/New\ York\ Hardcore.ttf);
+        }
+        @font-face {
+            font-family: escritas;
+            src: url(font/Designer.otf);
+      
+        @font-face {
+            font-family: escrita;
+            src: url(font/JMH\ Typewriter.otf);
+        }
+        }
+        @keyframes cor {
+            0%{
+                color: rgb(49, 9, 102);
+            }
+            25%{
+                color: rgb(38, 59, 173);
+            }
+            50%{
+                color: rgb(46, 78, 223);
+            }
+            75%{
+                color: rgba(15, 133, 141, 0.568)
+            }
+            100%{
+                color: rgb(50, 156, 18);
+            }
+
+            
+        }
+        body{background-image: linear-gradient(to top, rgb(49, 9, 102),rgb(38, 59, 173),rgb(46, 78, 223));
+            background-attachment: fixed;
+            
+        }
+        .base{
+            background-color: rgba(15, 133, 141, 0.568);
+            height: 400px;
+            width: auto;
+            border-radius: 5%;
+            text-align: center;
+            margin-top: auto;
+        }
+        .sec{
+            display: flex;
+            background-color: rgb(50, 156, 18);
+            text-align: center;
+            width: auto;
+            border-radius: 0% 0% 20% 20%;
+
+        }
+        .tit{
+            background-color: black;
+            font-family: Arial, Helvetica, sans-serif;
+            border-radius: 0% 0% 0% 0%;
+            font-family: titulos;
+            animation: cor 3s alternate infinite;
+        }
+        .lol{
+            width: 1600px;
+            height: 200px;    
+            font-family: escritas;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="base">
+        <h1 class="tit">Informações Basica</h1>
+        <div class="sec">
+            <div class="lol"><img style="width: 300px;height: 300px;" src="img/MOISESLD_mouse_mage_with_big_staff_white_background_cartoon_3153809f-0073-4e12-8273-06e8318be200-removebg-preview.png" alt="rato"></div>
+            <div class="lol">
+                <ul type="none">
+                    <li>ATRIBUTO /FORÇA</li>
+                    <br>
+                    <li>ATK: 1500</li>
+                    <li>DEF: 300</li>
+                    <li>AGL: 350</li>
+                    <li>SOR: 1200</li>
+                </ul>
+            </div>
+            <div class="lol" style="font-family: escrita;">Habilidades. Magos tem como características principais a Inteligência, que é usado para conjurar suas magias, e pode usar outras 3 características secundárias: Constituição para mais pontos de vida, Destreza para melhorar as Perícias e a Classe de Armadura ou Carisma, se quiser se especializar na escola do Encantamento ...</div>
+        </div>
+    </div>
+    <br><br>
+    <div class="base">
+        <h1 class="tit">Informações Basica</h1>
+        <div class="sec">                    
+            <div style="font-family: escrita;" class="lol">Magia é a aplicação de crenças, rituais ou ações empregadas na convicção de que elas podem subjugar ou manipular seres e forças naturais ou sobrenaturais É uma categoria na qual foram colocadas várias crenças e práticas, às vezes consideradas separadas tanto da religião quanto da ciência.</div> 
+            <div class="lol">
+                <ul type="none">
+                    <li>ATRIBUTO /FORÇA</li>
+                    <br>
+                    <li>ATK: 1300</li>
+                    <li>DEF: 500</li>
+                    <li>AGI: 250</li>
+                    <li>SOR: 1800</li>
+                </ul>
+            </div>
+            <div class="lol"><img style="width: 300px;height: 300px;" src="img/edlus_MOISESLD_mouse_mage_with_big_staff_white_background_carto_0bd68699-1e6d-4c68-b4c4-239b37e778d32.png" alt="rato"></div>
+        </div>
+    </div>
+</body>
+</html>

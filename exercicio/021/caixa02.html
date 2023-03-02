@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gruping tags</title>
+    <style>
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(77, 63, 63);
+    margin: 0px;
+}
+header{
+    background-color: aliceblue;
+    padding: 10px;
+    margin: 10px;
+}
+nav{
+    background-color: black;
+    padding: 3px;
+    box-shadow:inset 1px 1px 1px rgba(59, 9, 9, 0.582);
+
+}
+nav > a {
+    text-decoration: none;
+    color: rgb(248, 248, 248);
+    font-weight: bold;
+    margin-right: 80px;
+    
+}
+nav> a:hover {
+    text-decoration: underline;
+
+
+}
+main{
+    background-color: aliceblue;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px 20px 30px 40px;
+}
+footer{
+background-color: black;
+color: aliceblue;
+text-align: center;
+padding: 1px;
+margin: 0px;
+}
+div{
+    text-align: center;
+    color: brown;
+}
+div#bola{
+ height: 100px;
+ width: 100px;
+ margin: 10px;
+ background-color: antiquewhite;
+ border-radius: 50%;
+}
+div#bola:hover{
+
+    background-color: black;
+    border-radius: 0%;
+}
+img{
+    margin: 20px ;
+    border-radius:  50%;
+}
+img:hover{
+    border-radius: 0%;
+    background-color: black;
+    margin: red;
+}
+
+    </style>
+</head>
+<body>
+   <header>
+<h1>meu site</h1>
+<nav>
+    <a href="https://google.com">link</a>
+    <a href="https://youtube.com">link</a>
+    <a href="#">link</a>
+    <a href="#">link</a>
+    <a href="#">link</a>
+</nav>
+   </header>
+    <main>
+<section id="assusntos">
+
+</section>
+<section id="noticia">
+<article>
+    <h2>noticias</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis cum eius iure harum neque consectetur recusandae, ipsam magni assumenda provident. Pariatur necessitatibus hic inventore ratione nemo. Minima at provident exercitationem.</p>
+</article>
+</section>
+
+    </main>
+    <footer>
+<p>desenvolvedo pelo curso em video</p>
+
+    </footer>
+    <div id="bola">oi</div>
+    <div>
+        <img  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRaYcRVeydar72DVPGRTr40tWzGOUj2Lim5lZYdK_xOnpvQN6sg1baHode2X21wDTLN5PI&usqp=CAU" alt="">
+    </div>
+</body>
+</html>
