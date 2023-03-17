@@ -48,6 +48,7 @@ header a:hover, footer a:hover{
 
 section{
     font-family: var(--fonte1);
+    font-size: large;
     padding-top: 5%;
     padding-bottom: 5%;
     line-height: 2em;
@@ -59,26 +60,45 @@ section > h2{
 }
 
 section.normal{
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.671);
     color: black;
 }
 
 section.imagem{
     background-color: rgba(0, 0, 0, 0.753);
     color: white;
+    background-size: cover;
+    background-attachment: fixed;
 }
 
+section img{
+    max-width: 500px;
+    min-width: 200px;
+    width: 100%;
+    margin: auto;
+    display: block;
+   
+}
 
 section.imagem > p{
     max-width: 800px;
     display: inline-block;
     padding: 5px;
-    background-color: rgba(0, 0, 0, 0.301);
+    background-color: rgba(0, 0, 0, 0.829);
 } 
+
+section#img01{
+    background-image: url(../mundo\ aberto.jpg);
+
+}
+
+section#img02{
+    background-image: url(../terro.jpg);
+}
 
 footer{
     background-color: rgba(11, 4, 43, 0.719);
     text-align: center;
     color: white;
-    padding: 10px;
+    padding: 20px;
 }
