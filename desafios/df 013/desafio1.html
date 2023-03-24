@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 13</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        body{
+            background-color: aqua;
+        }
+        header{
+            padding: 20px;
+            background-color: aquamarine;
+        }
+        h1{
+            text-decoration: underline;
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;    
+        }
+        main{
+            padding: 20px;
+        }
+        table{
+            background-image: url(https://i.pinimg.com/236x/5e/6f/0a/5e6f0af04f6259b1aebf6fd04630337b.jpg);
+            background-attachment: fixed;
+            background-repeat: repeat;
+            background-size: cover;
+           border-collapse: collapse;
+        }
+        td,th{
+            text-align: center;
+            border: 1px solid black;
+            width: 80px;
+            height: 40px;
+        }
+        .total{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .tab{
+            padding: 10px 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Tabelas desafio 13</h1>
+    </header>
+    <main>
+        <div class="total">
+            <div class="tab">
+                <table>
+                    <thead>
+                        <tr>
+                            <th colspan="4"> TABELA DESAFIO 13.1</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>2</td>
+                            <td rowspan="2">3</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>6</td>
+                            <td>7</td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">8</td>
+                            <td>9</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="2">10</td>
+                            <td colspan="2">11</td>
+                            <td>12</td>
+                        </tr>
+                        <tr>
+                            <td>13</td>
+                            <td>14</td>
+                            <td>15</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <th colspan="4"> FINALIZADO</th>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+            <div class="tab">
+                <table>
+                    <thead>
+                        <tr>
+                            <th colspan="5"> TABELA DESAFIO 13.2</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td colspan="4">A</td>
+                            <td rowspan="4">B</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="4">C</td>
+                            <td>D</td>
+                            <td>E</td>
+                            <td>F</td>
+                        </tr>
+                        <tr>
+                            <td>G</td>
+                            <td>H</td>
+                            <td>I</td>
+                        </tr>
+                        <tr>
+                            <td>J</td>
+                            <td>L</td>
+                            <td>M</td>
+                        </tr>
+                        <tr>
+                            <td colspan="4">N</td>
+                        </tr>
+                    <tfoot>
+                        <tr>
+                            <th colspan="5"> FINALIZADO</th>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
