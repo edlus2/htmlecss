@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabela</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        
+        body{
+            background-image: url(https://www.bemcolar.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/e/s/estampa-papel-de-parede-3d-geometrico-gold.jpg);
+            background-attachment: fixed;
+            background-size: cover;
+            background-repeat: repeat;
+        }
+
+        header{
+            text-align: center;
+            background-color: black;
+            color: white;
+            padding: 10px;
+        }
+
+        div{
+            padding-top: 10px;
+            display: flex;
+            justify-content: center;
+           
+        }
+
+        table{
+           background-image: url(https://images.tcdn.com.br/img/img_prod/1102995/papel_de_parede_estrelas_cinza_azul_e_amarelo_93_1_987b5239f855a9b7039d9ad27e47f2ef.jpg);
+           background-attachment: fixed;
+           background-repeat: no-repeat;
+           background-size: cover;
+            font-family: Arial, Helvetica, sans-serif;
+            border-collapse: collapse;
+        }
+        
+        th,td{
+            text-align: center;
+            width: 100px;
+            height: 50px;
+            border: 1px solid black;
+        }
+
+        .cores{
+            background-color: grey;
+            color: white;
+        }
+
+        .core{
+            text-align: left;
+            background-color: grey;
+            color: white;
+        }
+
+        .media{
+            background-color: grey;
+            color: white;
+            font-size: large;
+        }
+    
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Tabela do df 014</h1>
+    </header>
+    <main>
+        <div>
+            <table>
+                <thead>
+                    <tr>
+                        <th class="cores" scope="col" rowspan="2">
+                            Área
+                        </th>
+                        <th class="cores" scope="col" rowspan="2">
+                            Disciplina
+                        </th>
+                        <th class="cores" scope="colgroup" colspan="2">
+                            Notas
+                        </th>
+                        <th class="cores" scope="col" rowspan="2">
+                            Média
+                        </th>
+                    </tr>
+                    <tr>
+                        <th class="cores" scope="col">Notas 1</th>
+                        <th class="cores" scope="col">Notas 2</th>
+                    </tr>
+                </thead>
+                <tbody>
+                        <tr>
+                            <th scope="rowgroup" rowspan="4" >Exatas</th>
+                            <td>Matematica</td>
+                            <td>0.0</td>
+                            <td>0.0</td>
+                            <td>0.0</td>
+                        </tr>
+                        <tr>
+                            <td>Fisica</td>
+                            <td>0.0</td>
+                            <td>0.0</td>
+                            <td>0.0</td>
+                        </tr>
+                        <tr>
+                            <td>Quimica</td>
+                            <td>0.0</td>
+                            <td>0.0</td>
+                            <td>0.0</td>
+                        </tr>
+                        <tr>
+                            <td>Biologia</td>
+                            <td>0.0</td>
+                            <td>0.0</td>
+                            <td>0.0</td>
+                        </tr>
+                        <tr>
+                        <th class="core" scope="row" colspan="4">Media de Exatas</th>
+                        <td class="media">0.0</td>
+                    </tr>
+                        <tr>
+                            <th scope="rowgroup" rowspan="2">Humanas</th>
+                            <td>Historia</td>
+                            <td>0.0</td>
+                            <td>0.0</td>
+                            <td>0.0</td>
+                        </tr>
+                        <tr>
+                            <td>Geografia</td>
+                            <td>0.0</td>
+                            <td>0.0</td>
+                            <td>0.0</td>
+                        </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <th class="core" scope="row" colspan="4">Media de Humanas</th>
+                        <td class="media">0.0</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+    </main>
+</body>
+</html>
