@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iframe</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        body{
+            background-color: green;
+            font-family: Arial, Helvetica, sans-serif;
+            background-image: url(https://images2.alphacoders.com/683/683733.png);
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-size: auto;
+            background-position: 100%;
+        }
+        h1{
+            text-align: center;
+            color: white;
+            padding-top: 10px;
+            background-color: rgba(11, 68, 24, 0.397);
+        }
+
+        div{
+           padding-top: 20px;
+           padding-bottom: 20px;
+        }
+        ul{
+            display: flex;
+            justify-content: space-around;
+            
+        }
+
+        li{
+            color: rgba(255, 255, 255, 0);
+        }
+
+        a{
+            font-weight: bold;
+            color: white;
+            text-decoration: none;  
+        }
+
+        li>a{
+            width: 700px;
+            height: 500px;
+            width: 100%;
+        }
+
+        #frame{
+            display: flex;
+            justify-content: center;
+        }
+
+        
+        iframe{
+            background-image: url(https://cdn.pixabay.com/photo/2020/07/30/12/06/question-mark-5450223_1280.jpg);
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-size: auto;
+            background-position: center;
+            width: 500px;
+            height: 500px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <h1>Bora testa paginas com iframe</h1>
+    <div>
+        <ul>
+            <li><a href="https://royalpets.vteximg.com.br/arquivos/ids/177812/gato-de-bengala-500-500-1.jpg?v=637534012451570000" target="quadro">Gato</a></li>
+            <li><a href="https://i.pinimg.com/originals/75/76/9b/75769bbe3f0e136785c150e2f6e72860.jpg" target="quadro">Cachorro</a></li>
+            <li><a href="https://www.oregonzoo.org/sites/default/files/styles/exhibit_thumbnail/public/2015/09/28/H_bald-eagle.jpg?itok=cndMQ8c9" target="quadro">Qual animal sera?</a></li>
+        </ul>
+    </div>
+    <div id="frame">
+        <iframe name="quadro" src="" >
+            <p>Infelismente seu navegador nao suporta o conteudo</p>
+        </iframe>
+    </div>
+    
+</body>
+</html>
