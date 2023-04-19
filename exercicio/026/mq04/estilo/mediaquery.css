@@ -2,6 +2,87 @@
 
 /*TODAS AS DEMAIS MIDIAS*/
 
+/* typical device breakpoints
+--------------------------------
+pequenas telas: ate 600px
+celular: 600px
+tablets: 768px ate 992px
+desktop: 992px ate 1200px
+grandes telas: acima de 1200px 
+*/
+
+/* CONFIGURAÇAO PARA IMPRESSORA*/
 @media print{
+    *{
+        font-family: 'Courier New', Courier, monospace;
+    }
+
+    body{
+        background-image: url(../img/back-print.jpg);
+    }
+
+    main h1{
+        text-shadow: none;
+        color: black;
+    }
+    main{
+        border: 2px solid black;
+    }
+    main::after{
+        content: 'essa impressao foi feta atraves do meu site';
+    }
+    img#fone {display: none;}
+    img#tablet {display: none;}
+    img#print {display: block;}
+    img#pc {display: none;}
+    img#tv {display: none;}
+}
+
+/*
+NAO PRESIZA FAZER ESSA CONFIGURAÇAO PORQUE O SITE JA ESDTA CONFIGURADO PARA ESSE TAMO DE TELA QUE SERIA O CELULAR.
+
+@media screen and ( max-width: 600px) {
+
+}
+
+@media screen and ( min-width: 600px) and ( max-width: 768px){
+
+}
+*/
+
+/* CONFIGURAÇAO PARA TABLET*/
+@media screen and ( min-width: 768px) and ( max-width: 992px){
+    body {
+        background-image: url(../img/back-tablet.jpg);
+    }
+    img#fone {display: none;}
+    img#tablet {display: block;}
+    img#print {display: none;}
+    img#pc {display: none;}
+    img#tv {display: none;}
     
+}
+
+/* CONFIGURAÇAO PARA DESKTOP*/
+@media screen and ( min-width: 992px) and ( max-width: 1200px){
+    body{
+        background-image: url(../img/back-pc.jpg);
+    }
+    img#fone {display: none;}
+    img#tablet {display: none;}
+    img#print {display: none;}
+    img#pc {display: block;}
+    img#tv {display: none;}
+}
+
+/* CONFIGURAÇAO PARA GRANDE TELAS*/
+@media screen and ( min-width: 1200px){
+    body{
+        background-image: url(../img/back-tv.jpg);
+    }
+    img#fone {display: none;}
+    img#tablet {display: none;}
+    img#print {display: none;}
+    img#pc {display: none;}
+    img#tv {display: block;}
 }
