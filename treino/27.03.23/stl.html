@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stl</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            overflow: hidden;
+            background-color: green;
+        }
+        h1{
+
+            padding: 20px;
+            text-align: center;
+        }
+        img{
+            width: 600px;
+            display: block;
+            margin: auto;
+            border-radius: 10px;
+        }
+        p{
+            padding: 20px;
+            text-align: center;
+            font-weight: bold;
+        }
+        #img{
+            display: none;
+            position: absolute;
+            top:50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+        #img > span {
+            cursor: pointer;
+            color: white;
+            font-weight: bold;
+            font-size: 2em;
+            position: absolute;
+            top: -10%;
+            left: 100%;
+            transform: translate(-50%,-50%);
+        }
+        #frente > iframe{
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Imagens de personagem em 3D</h1>
+    <img onclick="inicio()" src="https://files.cults3d.com/uploaders/5909433/illustration-file/c4011699-9211-4bd4-9ba2-576609eba3f7/Capture%20d%E2%80%99e%CC%81cran%202018-02-05%20a%CC%80%2010.48.11.png" alt="">
+    <p>Clique na imagem para ver em 3D</p>
+        <div id="img">
+            <span onclick="fechar()">X</span>
+            <div id="frente" class="sketchfab-embed-wrapper"> <iframe title="plantavszumbi" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share width="800" height="500" src="https://sketchfab.com/models/2e52da3dbd1345b9a51e2c81c9962358/embed?autostart=1"> </iframe> </div>
+        </div>
+
+    <script>
+        let fundo = document.getElementsByTagName('body')[0]
+        let imf = document.getElementsByTagName('img')[0]
+        let opc = document.getElementById('img')
+
+        function inicio() {
+            opc.style.display = 'block'
+            fundo.style.backgroundColor = 'black'
+            imf.style.display = 'none'
+        }
+
+        function fechar() {
+            opc.style.display = 'none'
+            imf.style.display = 'block' 
+            fundo.style.backgroundColor = 'green'
+        }
+    </script>
+</body>
+</html>
