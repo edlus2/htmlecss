@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Produção</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th, td { border: 1px solid black; padding: 8px; text-align: left; }
+        th { background-color: #f2f2f2; }
+    </style>
+</head>
+<body>
+    <h2>Registro de Produção</h2>
+    <form id="formProducao">
+        <label>Data: <input type="date" id="data"></label>
+        <label>Setor: <input type="text" id="setor"></label>
+        <label>Funcionário: <input type="text" id="funcionario"></label>
+        <label>Quantidade: <input type="number" id="quantidade"></label>
+        <label>Status: 
+            <select id="status">
+                <option value="Aprovado">Aprovado</option>
+                <option value="Reprovado">Reprovado</option>
+                <option value="Pendente">Pendente</option>
+            </select>
+        </label>
+        <button type="submit">Registrar</button>
+    </form>
+    
+    <h3>Dados Registrados</h3>
+    <button onclick="exportTableToCSV('producao.csv')">Exportar para CSV</button>
+    <table>
+        <thead>
+            <tr>
+                <th>Data</th>
+                <th>Setor</th>
+                <th>Funcionário</th>
+                <th>Quantidade</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody id="tabelaDados"></tbody>
+    </table>
+    
+    <script>
+        document.getElementById("formProducao").addEventListener("submit", function(event) {
+            event.preventDefault();
+            
+            let data = document.getElementById("data").value;
+            let setor = document.getElementById("setor").value;
+            let funcionario = document.getElementById("funcionario").value;
+            let quantidade = document.getElementById("quantidade").value;
+            let status = document.getElementById("status").value;
+            
+            let tabela = document.getElementById("tabelaDados");
+            let newRow = tabela.insertRow();
+            newRow.innerHTML = `<td>${data}</td><td>${setor}</td><td>${funcionario}</td><td>${quantidade}</td><td>${status}</td>`;
+            
+            document.getElementById("formProducao").reset();
+        });
+
+        function exportTableToCSV(filename) {
+            let csv = [];
+            let rows = document.querySelectorAll("table tr");
+            
+            for (let row of rows) {
+                let cols = row.querySelectorAll("td, th");
+                let rowData = [];
+                for (let col of cols) {
+                    rowData.push(col.innerText);
+                }
+                csv.push(rowData.join(","));
+            }
+            
+            let csvFile = new Blob([csv.join("\n")], { type: "text/csv" });
+            let link = document.createElement("a");
+            link.download = filename;
+            link.href = window.URL.createObjectURL(csvFile);
+            link.style.display = "none";
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+    </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Produção</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th, td { border: 1px solid black; padding: 8px; text-align: left; }
+        th { background-color: #f2f2f2; }
+    </style>
+</head>
+<body>
+    <h2>Registro de Produção</h2>
+    <form id="formProducao">
+        <label>Data: <input type="date" id="data"></label>
+        <label>Setor: <input type="text" id="setor"></label>
+        <label>Funcionário: <input type="text" id="funcionario"></label>
+        <label>Quantidade: <input type="number" id="quantidade"></label>
+        <label>Status: 
+            <select id="status">
+                <option value="Aprovado">Aprovado</option>
+                <option value="Reprovado">Reprovado</option>
+                <option value="Pendente">Pendente</option>
+            </select>
+        </label>
+        <button type="submit">Registrar</button>
+    </form>
+    
+    <h3>Dados Registrados</h3>
+    <button onclick="exportTableToCSV('producao.csv')">Exportar para CSV</button>
+    <table>
+        <thead>
+            <tr>
+                <th>Data</th>
+                <th>Setor</th>
+                <th>Funcionário</th>
+                <th>Quantidade</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody id="tabelaDados"></tbody>
+    </table>
+    
+    <script>
+        document.getElementById("formProducao").addEventListener("submit", function(event) {
+            event.preventDefault();
+            
+            let data = document.getElementById("data").value;
+            let setor = document.getElementById("setor").value;
+            let funcionario = document.getElementById("funcionario").value;
+            let quantidade = document.getElementById("quantidade").value;
+            let status = document.getElementById("status").value;
+            
+            let tabela = document.getElementById("tabelaDados");
+            let newRow = tabela.insertRow();
+            newRow.innerHTML = `<td>${data}</td><td>${setor}</td><td>${funcionario}</td><td>${quantidade}</td><td>${status}</td>`;
+            
+            document.getElementById("formProducao").reset();
+        });
+
+        function exportTableToCSV(filename) {
+            let csv = [];
+            let rows = document.querySelectorAll("table tr");
+            
+            for (let row of rows) {
+                let cols = row.querySelectorAll("td, th");
+                let rowData = [];
+                for (let col of cols) {
+                    rowData.push(col.innerText);
+                }
+                csv.push(rowData.join(","));
+            }
+            
+            let csvFile = new Blob([csv.join("\n")], { type: "text/csv" });
+            let link = document.createElement("a");
+            link.download = filename;
+            link.href = window.URL.createObjectURL(csvFile);
+            link.style.display = "none";
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+    </script>
+</body>
+</html>
